@@ -1,0 +1,31 @@
+README for Amith Ananthram
+
+The code should all work without any segfaults or leaks anywhere.
+No code was taken from the solutions emailed out.
+
+Special Notes:
+
+Crawler:
+	Everything is normal as far as I can gather.
+
+Indexer:
+	The index.dat file gets saved in the target directory!
+
+Query:
+	Typing in "q" in the queryengine will exit the program.
+
+	A note on ranking: 
+
+	For words ANDed together, rank = sum of individual occurences per page.
+		
+	For a certain page, if (cat AND dog) OR mouse was the query, and the 
+	first QUERY had a rank of 10 for that page, and the second QUERY had
+	a rank of 11, the page's overall rank is 11 (OR defaults to the larger).
+
+Extra Credit (changing MAX_HASH to 10 from 10000):
+
+At 10:
+	Completes without segfaults.  Takes 6:22 to complete, with 1986 files downloaded.
+
+At 10000:
+	Completes without segfaults.  Takes 6:25 to complete, with 1978 files downloaded.
